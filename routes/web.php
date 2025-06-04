@@ -21,10 +21,13 @@ Route::get('modificaempleados/{id}', [EmpleadosController::class, 'modificaemple
 Route:: POST('guardarcambios',[EmpleadosController:: class,'guardarcambios'])->name('guardarcambios');
 Route:: get('login',[LoginController:: class,'login'])->name('login');
 Route:: POST('validar',[LoginController:: class,'validar'])->name('validar');
-Route:: get('registro',[LoginController:: class,'registro'])->name('registro');
+//Route:: get('registro',[LoginController:: class,'registro'])->name('registro');
+Route::get('Apis/registro', 'LoginController@registro');
+
 Route:: POST('validar_user',[LoginController:: class,'validar_user'])->name('validar_user');
 Route:: get('principal',[LoginController:: class,'principal'])->name('principal');
 Route:: get('cerrarsesion',[LoginController:: class,'cerrarsesion'])->name('cerrarsesion');
+
 //llamado al controlador
 
 Route::get('/', function () {
