@@ -5,10 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\usuarios;
-use Session;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }   
+
     public function login(){        
         
      return view ('login');
